@@ -44,7 +44,7 @@ const Contact = () => {
             </div>
             <div className={styles.contactInfo}>
               <h3>Telepon</h3>
-              <p>+62 812-3456-7890</p>
+              <p>+62 858-4224-8393</p>
             </div>
           </motion.div>
 
@@ -58,7 +58,7 @@ const Contact = () => {
             </div>
             <div className={styles.contactInfo}>
               <h3>WhatsApp</h3>
-              <p>+62 812-3456-7890</p>
+              <p>+62 858-4224-8393</p>
             </div>
           </motion.div>
 
@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
             <div className={styles.contactInfo}>
               <h3>Email</h3>
-              <p>jamiyah.alhidayah@email.com</p>
+              <p>editanto290578@gmail.com</p>
             </div>
           </motion.div>
 
