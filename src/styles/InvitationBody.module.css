@@ -1,0 +1,407 @@
+.container {
+  padding: 2rem 0;
+}
+
+.content {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+  color: #D4AF37;
+  border-radius: 30px;
+  padding: 4rem 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.content::before,
+.content::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-image: url('/assets/images/batikpojok.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+  transition: all 0.5s ease;
+}
+
+.content:hover::before,
+.content:hover::after {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.content::before {
+  top: 20px;
+  left: 20px;
+  transform: rotate(0deg);
+}
+
+.content::after {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+.greeting {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  color: #D4AF37;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+  width: 100%;
+  background: linear-gradient(135deg, #D4AF37 0%, #b38f2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.greeting::before,
+.greeting::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    #D4AF37
+  );
+}
+
+.greeting::before {
+  left: 0;
+}
+
+.greeting::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 2;
+  margin: 3rem 0;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 175, 55, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 0 1rem;
+}
+
+.intro::before,
+.intro::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+}
+
+.intro::before {
+  top: -1rem;
+}
+
+.intro::after {
+  bottom: -1rem;
+}
+
+.eventDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 0 1rem;
+}
+
+.eventItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.eventItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eventItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.eventItem:hover::before {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 2.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.eventItem:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.2);
+}
+
+.eventItem h3 {
+  font-size: 1.3rem;
+  color: #D4AF37;
+  margin-bottom: 0.8rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #D4AF37 0%, #b38f2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.eventItem p {
+  color: rgba(212, 175, 55, 0.9);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.closing {
+  text-align: justify;
+  margin: 3rem 0;
+  font-size: 1.2rem;
+  line-height: 2;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 175, 55, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 0 1rem;
+}
+
+.closing::before,
+.closing::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+}
+
+.closing::before {
+  top: -1rem;
+}
+
+.closing::after {
+  bottom: -1rem;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.signatures::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+}
+
+.signatureBlock {
+  text-align: center;
+  flex: 1;
+  max-width: 250px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.signatureBlock:hover {
+  transform: translateY(-5px);
+}
+
+.role {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 175, 55, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.signatureLine {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(212, 175, 55, 0.5),
+    transparent
+  );
+  margin: 3rem 0;
+  position: relative;
+}
+
+.signatureImage {
+  display: block;
+  margin: 0 auto 0.5rem auto; /* Adjust margin as needed */
+  max-width: 150px; /* Adjust max-width as needed */
+  height: auto;
+}
+
+.signatureLine::before,
+.signatureLine::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D4AF37;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.signatureBlock:hover .signatureLine::before,
+.signatureBlock:hover .signatureLine::after {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.signatureLine::before {
+  left: 0;
+}
+
+.signatureLine::after {
+  right: 0;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1rem;
+    margin: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .greeting {
+    font-size: 1.4rem;
+  }
+
+  .eventDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .eventItem {
+    padding: 1.5rem;
+  }
+
+  .signatures {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .signatureBlock {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+
+  .eventItem h3 {
+    font-size: 1.2rem;
+  }
+
+  .eventItem p {
+    font-size: 1rem;
+  }
+
+  .closing {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+} 

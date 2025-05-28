@@ -1,0 +1,73 @@
+.container {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  overflow: hidden;
+}
+
+.batikOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/bgbatik.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Batik corner decorations */
+.content::before,
+.content::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url('/assets/images/batikpojok.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.content::before {
+  top: -20px;
+  left: -20px;
+  transform: rotate(0deg);
+}
+
+.content::after {
+  bottom: -20px;
+  right: -20px;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .content::before,
+  .content::after {
+    width: 100px;
+    height: 100px;
+  }
+} 

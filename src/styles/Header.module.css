@@ -1,0 +1,310 @@
+.header {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+  color: #D4AF37;
+  border-radius: 30px;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+}
+
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-image: url('/assets/images/batikpojok.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+  transition: all 0.5s ease;
+}
+
+.header:hover::before,
+.header:hover::after {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.header::before {
+  top: 20px;
+  left: 20px;
+  transform: rotate(0deg);
+}
+
+.header::after {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+.titleContainer {
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.titleContainer::before,
+.titleContainer::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(212, 175, 55, 0.5),
+    transparent
+  );
+}
+
+.titleContainer::before {
+  top: 0;
+}
+
+.titleContainer::after {
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1.5rem auto; /* Center the logo and add space below */
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+               0 0 20px rgba(212, 175, 55, 0.2);
+  position: relative;
+  background: linear-gradient(135deg, #D4AF37 0%, #b38f2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent,
+    #D4AF37,
+    transparent
+  );
+}
+
+.address {
+  font-size: 1.2rem;
+  color: #D4AF37;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.letterHead {
+  margin: 3rem 0;
+  padding: 2rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.letterHead:hover {
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+}
+
+.letterInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.letterLeft p,
+.letterRight p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  color: #D4AF37;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.letterLeft p:hover,
+.letterRight p:hover {
+  transform: translateX(5px);
+  color: #b38f2e;
+}
+
+.recipient {
+  margin: 3rem 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+.recipient:hover {
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+}
+
+.recipient p {
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+  color: #D4AF37;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.recipient p:hover {
+  transform: translateX(5px);
+  color: #b38f2e;
+}
+
+.recipientDetails {
+  margin-left: 2.5rem;
+}
+
+.greeting {
+  margin: 3rem 0;
+  font-size: 1.4rem;
+  color: #D4AF37;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.greeting::before,
+.greeting::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent,
+    #D4AF37
+  );
+}
+
+.greeting::before {
+  left: 0;
+}
+
+.greeting::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem 1rem;
+    margin: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .address {
+    font-size: 1.1rem;
+  }
+
+  .letterInfo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .letterRight {
+    align-self: flex-end;
+  }
+
+  .recipient {
+    padding: 1.5rem;
+  }
+
+  .recipientDetails {
+    margin-left: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .address {
+    font-size: 1rem;
+  }
+
+  .letterLeft p,
+  .letterRight p {
+    font-size: 1rem;
+  }
+
+  .recipient p {
+    font-size: 1.1rem;
+  }
+
+  .greeting {
+    font-size: 1.1rem;
+  }
+} 

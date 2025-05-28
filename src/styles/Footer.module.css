@@ -1,0 +1,111 @@
+.footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+  color: #D4AF37;
+  border-radius: 30px;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 0 0 1px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before,
+.footer::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-image: url('/assets/images/batikpojok.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  filter: drop_shadow(0 0 10px rgba(212, 175, 55, 0.2));
+  transition: all 0.5s ease;
+}
+
+.footer:hover::before,
+.footer:hover::after {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.footer::before {
+  top: 20px;
+  left: 20px;
+  transform: rotate(0deg);
+}
+
+.footer::after {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+.footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contactInfo {
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 175, 55, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contactInfo p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contactInfo p:hover {
+  transform: translateX(5px);
+  color: #b38f2e;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 175, 55, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+    margin: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .contactInfo p {
+    font-size: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  .contactInfo p {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+} 

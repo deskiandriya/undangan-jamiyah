@@ -1,0 +1,126 @@
+.layout {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #0f0f0f;
+    color: #d4af37;
+    padding: 2rem;
+  }
+  
+  .content-container {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+.header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #ffd700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #d4af37;
+  }
+  
+  .meta-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    color: #e6e6e6;
+  }
+  
+  .receiver {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .greeting {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+.invitation-body {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #f0e6d2;
+    margin-bottom: 2rem;
+  }
+  
+  .info-box {
+    background: rgba(255, 215, 0, 0.05);
+    border-left: 4px solid #d4af37;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .info-box p {
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .closing {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #ffffff;
+  }
+
+.footer-section {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .signatures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .signature-block {
+    text-align: center;
+  }
+  
+  .signature-img {
+    width: 120px;
+    height: auto;
+    margin: 0.5rem 0;
+    filter: brightness(0) invert(1); /* Putihkan gambar untuk mode dark */
+  }
+  
+  .role {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #d4af37;
+  }
+  
+  .name {
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0.5rem;
+  }
+  
+  
+  
