@@ -34,7 +34,7 @@ const Header = () => {
         <motion.p variants={itemVariants} className={styles.address}>
           Sekretariat: RT 01 RW 03 Kel. Debong Lor, Kec. Tegal Barat, Kota Tegal
           <br />
-          Kontak: +62 812-3456-7890
+          Kontak: +62 858-4224-8393
         </motion.p>
       </motion.div>
 
