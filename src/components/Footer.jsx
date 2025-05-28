@@ -23,8 +23,8 @@ const Footer = () => {
       className={styles.footer}
     >
       <div className={styles.contactInfo}>
-        <p>📞 +62 812-3456-7890</p>
-        <p>📧 info@jamiyahalhidayah.com</p>
+        <p>📞 +62 858-4224-8393</p>
+        <p>📧 editanto290578@gmail.com</p>
       </div>
       <p className={styles.copyright}>&copy; {currentYear} Jamiyah Al Hidayah. All rights reserved.</p>
     </motion.footer>
